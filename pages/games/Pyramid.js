@@ -149,7 +149,7 @@ export default function Pyramid(props) {
                     </>
                     }
                     <label>Record:</label>
-                    <span className="clock">{record[0]}:{record[1]}</span>
+                    <span>{record[0]}:{record[1]}</span>
                 </div>
             </main>
             {/*win && <Confetti width={window.innerWidth} height={window.innerHeight} gravity={0.5}/>*/}
