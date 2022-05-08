@@ -75,7 +75,7 @@ export default function Pyramid(props) {
                 if (n > (props.value === 4 ? 0.4 : 0.6)) {
                     aux++
                     line.push(<input 
-                        className="helper" 
+                        className="input-result" 
                         onChange={changeInput} 
                         key={nanoid()} 
                         type='number' 
@@ -95,7 +95,7 @@ export default function Pyramid(props) {
 
         
         return(
-            <div className="piramid">
+            <div className="pyramid">
                 {pyramid.reverse()}
             </div>
         )
@@ -135,7 +135,9 @@ export default function Pyramid(props) {
                         <div>Time: {mins}:{secs}</div>
                     </div> :
                 <></> }
-                {newPyramid(test)}
+                <div className="pyramid-container">
+                    {newPyramid(test)}
+                </div>
                 <div className="clock-container"> 
                     {finish ? 
                     <>

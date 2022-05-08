@@ -38,6 +38,9 @@ export default function Home() {
         <Link href='/games/Anagram'>
           <a className='game-link'>Anagram</a>
         </Link>
+        <Link href='/games/Maths'>
+          <a className='game-link'>Maths</a>
+        </Link>
       </div>
 
 

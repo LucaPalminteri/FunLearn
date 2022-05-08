@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
-import Add from './Add'
-import Subtract from './Subtract'
-import Multiply from './Multiply'
-import Divide from './Divide'
+// import Add from './Add'
+// import Subtract from './Subtract'
+// import Multiply from './Multiply'
+// import Divide from './Divide'
 
 export default function Maths() {
 
