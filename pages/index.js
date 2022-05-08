@@ -21,26 +21,25 @@ export default function Home() {
 
       <hr />
 
-      <h2>Games</h2>
-      <Link href='/games/TicToe'>
-        <a>Tic Tac Toe</a>
-      </Link>
-      {' - '}
-      <Link href='/games/Quiz'>
-        <a>Quiz</a>
-      </Link>
-      {' - '}
-      <Link href='/games/Pyramid'>
-        <a>Numerical Pyramid</a>
-      </Link>
-      {' - '}
-      <Link href='/games/Memory'>
-        <a>Memory</a>
-      </Link>
-      {' - '}
-      <Link href='/games/Anagram'>
-        <a>Anagram</a>
-      </Link>
+        <h2>Games</h2>
+      <div className='games-container'>
+        <Link href='/games/TicToe'>
+          <a className='game-link'>Tic Tac Toe</a>
+        </Link>
+        <Link href='/games/Quiz'>
+          <a className='game-link'>Quiz</a>
+        </Link>
+        <Link href='/games/Pyramid'>
+          <a className='game-link'>Numerical Pyramid</a>
+        </Link>
+        <Link href='/games/Memory'>
+          <a className='game-link'>Memory</a>
+        </Link>
+        <Link href='/games/Anagram'>
+          <a className='game-link'>Anagram</a>
+        </Link>
+      </div>
+
 
       <Footer />
     </div>
