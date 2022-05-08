@@ -15,6 +15,7 @@ export default function Footer() {
             <Link href={'/info/privacy-policy'}>
                 <a>Privacy Policy</a>
             </Link>
+            <h3>Copyright © FunLearn {new Date().getFullYear()}</h3>
         </div>
     )
 }
