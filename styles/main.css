@@ -1,0 +1,69 @@
+html,
+body {
+  padding: 0 20px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  background-color: grey;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.footer {
+  background-color: #ef78fa;
+}
+
+.footer h1 {
+  margin: 0;
+}
+
+.home {
+  background-color: salmon;
+}
+
+.game {
+  background-color: pink;
+}
+
+.anagram h2 {
+  background-color: green;
+}
+
+.maths h2 {
+  background-color: green;
+}
+
+.memory h2 {
+  background-color: green;
+}
+
+.pyramid h2 {
+  background-color: green;
+}
+
+.quiz h2 {
+  background-color: green;
+}
+
+.tic-tac-toe h2 {
+  background-color: green;
+}
+/*# sourceMappingURL=main.css.map */

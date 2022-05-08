@@ -1,3 +1,15 @@
+# FunLearn
+
+This is the version v1.0 of the software with the goal to teach more kids, and with inclussion to those who has some disability.
+
+This project belongs to Luca Palminteri. 
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
