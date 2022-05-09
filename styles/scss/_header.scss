@@ -4,10 +4,11 @@
     align-items: center;
     position: fixed;
     top: 0;
-    right: 40px;
-    left: 40px;
+    right: 0px;
+    left: 0px;
     height: 80px;
     background-color: grey;
+    padding: 0 20px;
 
     h1 {
         margin: 0;
@@ -15,5 +16,15 @@
 
     .header__navbar {
         display: flex;
+        align-items: center;
+
+        .language {
+            border-left: 2px solid;
+        }
+
+        &>* {
+           margin: 0 10px; 
+           padding: 4px 8px;
+        }
     }
 }

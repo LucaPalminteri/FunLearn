@@ -43,11 +43,11 @@ export default function Quiz() {
       <Header />
       <h2>Quiz</h2>
 
-      <div className="card">
+      <div className="quiz__container">
         <h2>{data[random].category}</h2>
-        <div className="card--badge">
+        <div className="">
           <h3>{data[random].question}</h3>
-          <div className="card--btns">{buttons}</div>
+          <div className="questions">{buttons}</div>
         </div>
       </div>
       {answer === "correct" ? (

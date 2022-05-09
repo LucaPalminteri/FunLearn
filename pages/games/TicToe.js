@@ -87,8 +87,8 @@ export default function TicToe() {
             <Header />
             <h2>Tic Tac Toe</h2>
 
-            {!result ? 
-            <div className='container'>
+            {!result ?
+                <div className='tic-tac-toe__container'>
                 <button onClick={toggle} className='cell 1'></button>
                 <button onClick={toggle} className='cell 2'></button>
                 <button onClick={toggle} className='cell 3'></button>
@@ -98,7 +98,8 @@ export default function TicToe() {
                 <button onClick={toggle} className='cell 7'></button>
                 <button onClick={toggle} className='cell 8'></button>
                 <button onClick={toggle} className='cell 9'></button>
-            </div> : <div></div>}
+            </div>
+             : <></>}
             {winner || result ?
             <div>
                 <h4>Times X wins: {xWins}</h4>

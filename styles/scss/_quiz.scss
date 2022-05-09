@@ -2,4 +2,20 @@
     h2 {
         background-color: green;
     }
+
+    .quiz__container {
+        text-align: center;
+
+        .questions {
+            display: grid;
+            grid-template-columns: repeat(2,30%);
+            grid-template-rows: repeat(2,100px);
+            gap: 30px;
+            justify-content: center;
+
+            button {
+                font-size: 30px;
+            }
+        }
+    }
 }

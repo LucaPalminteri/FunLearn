@@ -24,7 +24,35 @@ export default function Home() {
 
       <hr />
 
-        <h2>Games</h2>
+      <ul>
+        <li>Educational platform</li>
+        <li>Accesible for everyone</li>
+        <li>Free learning</li>
+        <li>No ads</li>
+      </ul>
+
+      <h2>Why choose FunLearn?</h2>
+      <p>Lorem Ipsu</p>
+
+      <h2>A helpful tool for teachers</h2>
+      <ul>
+        <li>Increase the confidence, autonomy and determination of your students</li>
+        <li>Motivate your students with FunLearn</li>
+        <li>Have full control over the progress of your students</li>
+        <li>Easily offer personalized learning</li>
+        <li>Take advantage of an educational platform aligned with your academic program</li>
+      </ul>
+
+      <h2>An essential help for parents</h2>
+      <ul>
+        <li>Make math enjoyable and interesting</li>
+        <li>Nurture your children’s confidence in math</li>
+        <li>Follow their progress in real time</li>
+        <li>Take advantage of educational games aligned with math curriculums</li>
+        <li>Help your children reach their full potential autonomously</li>
+      </ul>
+
+      <h2>Games</h2>
       <div className='games-container'>
         <Link href='/games/TicToe'>
           <a className='game-link'>
@@ -68,7 +96,6 @@ export default function Home() {
             <button>Play</button></a>
         </Link>
       </div>
-
 
       <Footer />
     </div>

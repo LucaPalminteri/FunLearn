@@ -1,5 +1,22 @@
 .footer {
+    margin: 0 -20px;
     text-align: center;
     padding: 20px 0;
     background-color: grey;
+
+    .footer__info {
+        display: flex;
+        justify-content: center;
+
+        &>div {
+            margin: 0 10px;
+            text-align: start;
+        }
+    }
+
+    .footer__bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

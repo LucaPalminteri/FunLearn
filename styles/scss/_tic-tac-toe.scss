@@ -1,10 +1,16 @@
 .tic-tac-toe {
-    h2 {
-        background-color: green;
-    }
 
-    button {
-        width: 40px;
-        height: 40px;
+    .tic-tac-toe__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,80px);
+        grid-template-rows: repeat(3,80px);
+        gap: 5px;
+        justify-content: center;
+
+        button {
+            font-size: 40px;
+            border: none;
+        }
     }
 }

@@ -10,11 +10,10 @@ export default function Header() {
                 </a>
             </Link>
             <nav className='header__navbar'>
-                <div>Download the App</div>
-                {' - '}
-                <div>Need Help?</div>
-                {' - '}
-                <div>Log In</div>
+                <span>Teachers</span>
+                <span>Parents</span>
+                <p className='language'>EN(US)</p>
+                <button>Log In</button>
             </nav>
         </header>
     )
