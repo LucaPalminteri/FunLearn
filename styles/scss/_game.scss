@@ -1,19 +1,25 @@
 .games-container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,200px);
+    grid-template-rows: repeat(2,auto);
+    gap: 20px;
     justify-items: center;
     align-items: center;
 
     .game-link {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 50%;
-        height: 50%;
+        width: 90%;
+        height: 90%;
         border: 1px solid;
         border-radius: 6px;
         transition-duration: .2s;
+
+        img {
+            width: 80%;
+        }
 
         &:hover {
             background-color: #efefef;

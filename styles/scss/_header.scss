@@ -1,9 +1,19 @@
 .header {
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 40px;
+    left: 40px;
     height: 80px;
     background-color: grey;
 
     h1 {
         margin: 0;
+    }
+
+    .header__navbar {
+        display: flex;
     }
 }

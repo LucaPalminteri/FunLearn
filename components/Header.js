@@ -9,6 +9,13 @@ export default function Header() {
                     <h1>FunLearn</h1>
                 </a>
             </Link>
+            <nav className='header__navbar'>
+                <div>Download the App</div>
+                {' - '}
+                <div>Need Help?</div>
+                {' - '}
+                <div>Log In</div>
+            </nav>
         </header>
     )
 }
