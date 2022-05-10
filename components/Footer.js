@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className='footer'>
             <div className="footer__info">
             <div>
-                <h3>The company</h3>
+                <h3>About</h3>
                 <nav>
                     <li>Our history</li>
                     <li>Careers</li>
@@ -33,6 +33,7 @@ export default function Footer() {
                 <nav>
                     <li>Need help?</li>
                     <li>Contact us</li>
+                    <li>FAQs</li>
                 </nav>
             </div>
             </div>

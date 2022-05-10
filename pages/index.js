@@ -14,10 +14,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Kumbh+Sans:wght@500&display=swap" rel="stylesheet" />
       </Head>
 
       <Header />
+      <img src='https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'/>
 
       <h1>FunLearn</h1>
       <h3>A place where you can play and learn</h3>

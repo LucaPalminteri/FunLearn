@@ -1,15 +1,14 @@
 .footer {
-    margin: 0 -20px;
     text-align: center;
-    padding: 20px 0;
-    background-color: grey;
+    padding-top: 20px;
+    background-color: #76B947;
 
     .footer__info {
         display: flex;
         justify-content: center;
 
         &>div {
-            margin: 0 10px;
+            margin: 0 30px;
             text-align: start;
         }
     }
@@ -18,5 +17,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        p{
+            margin-left: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer {
+
+        .footer__info {
+            flex-wrap: wrap;
+        }
     }
 }

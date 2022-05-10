@@ -7,7 +7,7 @@
     right: 0px;
     left: 0px;
     height: 80px;
-    background-color: grey;
+    background-color: #76B947;
     padding: 0 20px;
 
     h1 {
@@ -18,13 +18,26 @@
         display: flex;
         align-items: center;
 
+        button {
+            border-radius: 4px;
+            border: 2px solid;
+        }
+
+        .login-btn {
+            background-color: transparent;
+        }
+
         .language {
             border-left: 2px solid;
+            padding: 8px 30px;
         }
 
         &>* {
            margin: 0 10px; 
-           padding: 4px 8px;
+           padding: 8px 8px;
         }
     }
+}
+
+@media screen and (max-width: 700px) {
 }

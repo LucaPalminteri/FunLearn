@@ -43,6 +43,17 @@
     }
 }
 
-.game {
-    background-color: pink;
+@media screen and (max-width: 1000px) {
+    .games-container {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,auto);
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .games-container {
+        grid-template-columns: repeat(1,1fr);
+        gap: 0;
+    }
 }
