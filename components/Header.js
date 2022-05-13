@@ -38,7 +38,11 @@ export default function Header() {
                 <span>Teachers</span>
                 <span>Parents</span>
                 <p className='language'>EN(US)</p>
-                <button className='login-btn'>Log In</button>
+                <Link href={'/authentication/Login'}>
+                    <a>
+                        <button className='login-btn'>Log In</button>
+                    </a>
+                </Link>
                 <button>Sing Up</button>
             </nav>
             :
