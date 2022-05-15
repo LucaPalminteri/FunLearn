@@ -38,12 +38,17 @@ export default function Header() {
                 <span>Teachers</span>
                 <span>Parents</span>
                 <p className='language'>EN(US)</p>
+                <a href="/api/auth/login">Login</a>
                 <Link href={'/authentication/Login'}>
                     <a>
                         <button className='login-btn'>Log In</button>
                     </a>
                 </Link>
-                <button>Sing Up</button>
+                <Link href='/authentication/Singup'>
+                    <a>
+                        <button>Sing Up</button>
+                    </a>
+                </Link>
             </nav>
             :
             <div>Menu</div>}

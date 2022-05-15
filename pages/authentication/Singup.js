@@ -1,9 +1,8 @@
 import { useState } from "react"
-import Header from "../../components/header"
 import Link from "next/link"
-//import { getUser } from "./dataLogin"
+//const mysql = require('mysql')
 
-export default function Login() {
+export default function Singup() {
     const [email,setEmail] = useState()
     const [password, setPassword] = useState()
 
@@ -17,11 +16,15 @@ export default function Login() {
 
     return (
         <div className="login">
-            <h2>Log In</h2>
+            <h2>Sing Up</h2>
             <form className="form">
+                <label>Name:</label>
+                <input type='text' required />
                 <label>Email:</label>
                 <input type='email' required onChange={inputEmail}/>
                 <label>Password:</label>
+                <input type='password' required onChange={inputPassword}/>
+                <label>Repeat password:</label>
                 <input type='password' required onChange={inputPassword}/>
                 <button type="submit">Log In</button>
             </form>
