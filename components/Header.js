@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/dist/client/link';
-import { Auth0Provider } from "@auth0/auth0-react";
+import { useUser } from '@auth0/nextjs-auth0'
+import Image from 'next/image'
+
 
 export default function Header() {
+
+    const { user, error, isLoading } = useUser();
+
+    console.log(isLoading);
 
     const [width, setWidth] = useState(0)
     const [showMenu,setShowMenu] = useState(true)
@@ -11,6 +17,7 @@ export default function Header() {
         setWidth(window.innerWidth);
     },[])
     
+    console.log(user);
 
     function toggleMenu() {
         setShowMenu(prev => !prev)
@@ -38,17 +45,14 @@ export default function Header() {
                 <span>Teachers</span>
                 <span>Parents</span>
                 <p className='language'>EN(US)</p>
+                {user ? 
+                <>
+                    <a href="/api/auth/logout">Logout</a>
+                    {/* <img src={user.picture}/> */}
+                </>
+                :
                 <a href="/api/auth/login">Login</a>
-                <Link href={'/authentication/Login'}>
-                    <a>
-                        <button className='login-btn'>Log In</button>
-                    </a>
-                </Link>
-                <Link href='/authentication/Singup'>
-                    <a>
-                        <button>Sing Up</button>
-                    </a>
-                </Link>
+                }
             </nav>
             :
             <div>Menu</div>}

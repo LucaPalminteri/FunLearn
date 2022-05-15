@@ -3,9 +3,14 @@ import Image from 'next/image'
 import Link from 'next/dist/client/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useUser } from '@auth0/nextjs-auth0'
 
 
 export default function Home() {
+
+  const { user, error, isLoading } = useUser();
+  console.log(user);
+
   return (
     <div className='home'>
       <Head>
@@ -20,6 +25,9 @@ export default function Home() {
       <Header />
       <img src='https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'/>
 
+      {user ? <>
+      <h2>Welcome {user.name}!</h2>
+      </> : <></> }
       <h1>FunLearn</h1>
       <h3>A place where you can play and learn</h3>
 
