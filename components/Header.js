@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/dist/client/link';
 import { useUser } from '@auth0/nextjs-auth0'
 import Image from 'next/image'
-
+import { TiThMenu } from 'react-icons/Ti';
 
 export default function Header() {
 
@@ -12,6 +12,7 @@ export default function Header() {
     const [showMenu,setShowMenu] = useState(true)
     const [menuTeacher, setMenuTeacher] = useState(false)
     const [menuParents, setMenuParents] = useState(false)
+    const [responsiveMenu, setResponsiveMenu] = useState(false)
 
     useEffect(()=>{
         setWidth(window.innerWidth);
@@ -43,6 +44,10 @@ export default function Header() {
             setMenuTeacher(false)
             setMenuParents(false)
         }
+    }
+
+    function displayResponsiveMenu() {
+        setResponsiveMenu(prev => !prev)
     }
 
     return (
@@ -80,7 +85,37 @@ export default function Header() {
                 }
             </nav>
             :
-            <div>Menu</div>}
+            <div>
+                <TiThMenu className='header__menu' onClick={displayResponsiveMenu}/>
+            </div>}
+
+            {responsiveMenu? 
+            <div className='header__responsive-navbar'>
+                <span onClick={displayMenuTeacher}>Teachers</span>
+                {menuTeacher ? <div className='menu teachers'>
+                        <span>First step</span>
+                        <span>Second step</span>
+                        <span>Third step</span>
+                        <span>Fourth step</span>
+                </div> : <></>}
+                <span onClick={displayMenuParents}>Parents</span>
+                {menuParents ? <div className='menu parents'>
+                        <span>First step</span>
+                        <span>Second step</span>
+                        <span>Third step</span>
+                        <span>Fourth step</span>
+                </div> : <></>}
+                <div></div>
+                <p className='language'>EN(US)</p>
+                {user ? 
+                <>
+                    <a href="/api/auth/logout" className='login logout'>Logout</a>
+                </>
+                :
+                <a href="/api/auth/login" className='login'>Login</a>
+                }
+            </div>
+            : <></>}
             
         </header>
     )

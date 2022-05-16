@@ -14,11 +14,12 @@ export default function Home() {
   console.log(user);
 
   const games = dataGames.map( game => {
+    console.log(game.img);
     return(
       <Link href={game.href} key={nanoid()}>
           <a className='game-link'>
             <h3>{game.title}</h3>
-            <img src={game.img}/>
+            <img src={game.img} width={100} height={100}/>
             <button>Play</button>
           </a>
       </Link>
@@ -43,19 +44,32 @@ export default function Home() {
         <h3>A place where you can play and learn</h3>
       </div>
       <div className='home__info'>
+
+
       {user ? <>
       <h2>Welcome {user.name}!</h2>
-      </> : <></> }
-
-      <ul>
-        <li>Educational platform</li>
-        <li>Accesible for everyone</li>
-        <li>Free learning</li>
-        <li>No ads</li>
-      </ul>
+      </> : <>
 
       <h2>Why choose FunLearn?</h2>
-      <p>Lorem Ipsu</p>
+      <div className='home__first-line'>
+          <div>
+            <Image src='/images/lightbulb.png' width={200} height={200}/>
+            <h3>Educational platform</h3>
+          </div>
+          <div>
+            <Image src='/images/book2.png' width={200} height={200}/>
+            <h3>Accesible for everyone</h3>
+          </div>
+          <div>
+            <Image src='/images/book.png' width={200} height={200}/>
+            <h3>Free learning</h3>
+          </div>
+          <div>
+            <Image src='/images/engineering.png' width={200} height={200}/>
+            <h3>No ads</h3>
+          </div>
+      </div>
+      
 
       <h2>A helpful tool for teachers</h2>
       <ul>
@@ -74,6 +88,9 @@ export default function Home() {
         <li>Take advantage of educational games aligned with math curriculums</li>
         <li>Help your children reach their full potential autonomously</li>
       </ul>
+      </> }
+
+      
 
       <h2>Games</h2>
       </div>
