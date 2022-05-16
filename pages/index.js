@@ -4,12 +4,26 @@ import Link from 'next/dist/client/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useUser } from '@auth0/nextjs-auth0'
+import dataGames from '../data/games.json'
+import { nanoid } from 'nanoid';
 
 
 export default function Home() {
 
   const { user, error, isLoading } = useUser();
   console.log(user);
+
+  const games = dataGames.map( game => {
+    return(
+      <Link href={game.href} key={nanoid()}>
+          <a className='game-link'>
+            <h3>{game.title}</h3>
+            <img src={game.img}/>
+            <button>Play</button>
+          </a>
+      </Link>
+    )
+  })
 
   return (
     <div className='home'>
@@ -23,15 +37,15 @@ export default function Home() {
       </Head>
 
       <Header />
-      <img src='https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'/>
 
+      <div className='home__first-page'>
+        <h1>FunLearn</h1>
+        <h3>A place where you can play and learn</h3>
+      </div>
+      <div className='home__info'>
       {user ? <>
       <h2>Welcome {user.name}!</h2>
       </> : <></> }
-      <h1>FunLearn</h1>
-      <h3>A place where you can play and learn</h3>
-
-      <hr />
 
       <ul>
         <li>Educational platform</li>
@@ -62,48 +76,9 @@ export default function Home() {
       </ul>
 
       <h2>Games</h2>
+      </div>
       <div className='games-container'>
-        <Link href='/games/TicToe'>
-          <a className='game-link'>
-            <h3>Tic Tac Toe</h3>
-            <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rd.com%2Fwp-content%2Fuploads%2F2019%2F10%2Ftic-tac-toe-scaled.jpg%3Fresize%3D2048&f=1&nofb=1'/>
-            <button>Play</button>
-          </a>
-        </Link>
-        <Link href='/games/Quiz'>
-          <a className='game-link'>
-            <h3>Quiz</h3>
-            <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Flinkskorner.com%2Fwp-content%2Fuploads%2F2018%2F12%2Fquestion-answer-sites-list.jpg%3Ffit%3D2560%252C1440%26ssl%3D1&f=1&nofb=1'/>
-            <button>Play</button>
-          </a>
-        </Link>
-        <Link href='/games/Pyramid'>
-          <a className='game-link'>
-            <h3>Numerical Pyramid</h3>
-            <img src='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftop-puzzles.co.uk%2Fwp-content%2Fuploads%2F2017%2F10%2FNumber-pyramid-3.jpg&f=1&nofb=1'/>
-            <button>Play</button>
-          </a>
-        </Link>
-        <Link href='/games/Memory'>
-          <a className='game-link'>
-            <h3>Memory</h3>
-            <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstorage.googleapis.com%2Fibw-blog%2Fmedia%2F6e%2F2504b17e1d07b39b7c54f1bdda6b33.jpeg&f=1&nofb=1'/>
-            <button>Play</button>
-          </a>
-        </Link>
-        <Link href='/games/Anagram'>
-          <a className='game-link'>
-            <h3>Anagram</h3>
-            <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fappgrooves.com%2Fcdn%2Farticle%2F308%2Fe%2F76099-02754-75221-07551_w1200.png&f=1&nofb=1'/>
-            <button>Play</button>
-          </a>
-        </Link>
-        <Link href='/games/Maths'>
-          <a className='game-link'>
-            <h3>Maths</h3>
-            <img src='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.eigenmagic.com%2Fwp-uploads%2F2014%2F03%2Fsimple_maths.jpg&f=1&nofb=1'/>
-            <button>Play</button></a>
-        </Link>
+        {games}
       </div>
 
       <Footer />

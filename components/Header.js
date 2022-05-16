@@ -46,7 +46,7 @@ export default function Header() {
     }
 
     return (
-        <header className='header'>
+        <header className='header' onClick={resetClicks}>
             <Link href={'/'}>
                 <a>
                     <h1>FunLearn</h1>
@@ -56,31 +56,27 @@ export default function Header() {
             {showMenu ? 
             <nav className='header__navbar'>
                 <span onClick={displayMenuTeacher}>Teachers</span>
-                {menuTeacher ? <div className='teachers'>
-                    <ul>
-                        <li>First step</li>
-                        <li>Second step</li>
-                        <li>Third step</li>
-                        <li>Fourth step</li>
-                    </ul>
+                {menuTeacher ? <div className='menu teachers'>
+                        <span>First step</span>
+                        <span>Second step</span>
+                        <span>Third step</span>
+                        <span>Fourth step</span>
                 </div> : <></>}
                 <span onClick={displayMenuParents}>Parents</span>
-                {menuParents ? <div className='parents'>
-                    <ul>
-                        <li>First step</li>
-                        <li>Second step</li>
-                        <li>Third step</li>
-                        <li>Fourth step</li>
-                    </ul>
+                {menuParents ? <div className='menu parents'>
+                        <span>First step</span>
+                        <span>Second step</span>
+                        <span>Third step</span>
+                        <span>Fourth step</span>
                 </div> : <></>}
                 <div></div>
                 <p className='language'>EN(US)</p>
                 {user ? 
                 <>
-                    <a href="/api/auth/logout">Logout</a>
+                    <a href="/api/auth/logout" className='login logout'>Logout</a>
                 </>
                 :
-                <a href="/api/auth/login">Login</a>
+                <a href="/api/auth/login" className='login'>Login</a>
                 }
             </nav>
             :

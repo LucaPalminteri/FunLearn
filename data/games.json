@@ -1,0 +1,32 @@
+[
+    {
+        "href": "/games/TicToe",
+        "title": "Tic Tac Toe",
+        "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rd.com%2Fwp-content%2Fuploads%2F2019%2F10%2Ftic-tac-toe-scaled.jpg%3Fresize%3D2048&f=1&nofb=1"
+    },
+    {
+        "href": "/games/Quiz",
+        "title": "Quiz",
+        "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Flinkskorner.com%2Fwp-content%2Fuploads%2F2018%2F12%2Fquestion-answer-sites-list.jpg%3Ffit%3D2560%252C1440%26ssl%3D1&f=1&nofb=1"
+    },
+    {
+        "href": "/games/Pyramid",
+        "title": "Numerical Pyramid",
+        "img": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftop-puzzles.co.uk%2Fwp-content%2Fuploads%2F2017%2F10%2FNumber-pyramid-3.jpg&f=1&nofb=1"
+    },
+    {
+        "href": "/games/Memory",
+        "title": "Memory",
+        "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstorage.googleapis.com%2Fibw-blog%2Fmedia%2F6e%2F2504b17e1d07b39b7c54f1bdda6b33.jpeg&f=1&nofb=1"
+    },
+    {
+        "href": "/games/Anagram",
+        "title": "Anagram",
+        "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fappgrooves.com%2Fcdn%2Farticle%2F308%2Fe%2F76099-02754-75221-07551_w1200.png&f=1&nofb=1"
+    },
+    {
+        "href": "/games/Maths",
+        "title": "Maths",
+        "img": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.eigenmagic.com%2Fwp-uploads%2F2014%2F03%2Fsimple_maths.jpg&f=1&nofb=1"
+    }
+]

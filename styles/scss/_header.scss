@@ -22,7 +22,7 @@
     left: 0px;
     height: 80px;
     background-color: #76B947;
-    padding: 0 20px;
+    padding: 0 60px;
 
     h1 {
         margin: 0;
@@ -36,36 +36,62 @@
             cursor: pointer;
         }
 
-        .teachers {
+        .menu {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
             cursor: pointer;
             position: absolute;
-            top: 60px;
-            right: 350px;
             background-color: #efab45;
             @include animation();
+
+            span {
+                padding: 4px 8px;
+                transition-duration: .2s;
+
+                &:hover {
+                    background-color: #efefef;
+                }
+                }
+            }
+        
+
+        .teachers {
+            top: 60px;
+            right: 350px;
         }
 
         .parents {
-            cursor: pointer;
-            position: absolute;
             top: 60px;
-            right: 180px;
-            background-color: #efab45;
-            @include animation();
-        }
-
-        button {
-            border-radius: 4px;
-            border: 2px solid;
-        }
-
-        .login-btn {
-            background-color: transparent;
+            right: 230px;
         }
 
         .language {
             border-left: 2px solid;
             padding: 8px 30px;
+        }
+
+        .login {
+            background-color: #efab45;
+            width: 100px;
+            height: 40px;
+            transition-duration: .2s;
+
+            &:hover {
+                border: 2px solid #efab45;
+                background-color: transparent;
+            }
+
+            &:active {
+                background-color: #cf8b25;
+            }
+        }
+
+        .logout {
+            background-color: #188efa;
+            &:active {
+                background-color: #184eaa;
+            }
         }
 
         &>* {
