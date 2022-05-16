@@ -38,7 +38,7 @@
         justify-content: center;
         background-image: url('https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
         background-size: cover;
-        background-position: 40%;
+        background-position: 50%;
 
         h1 {
             font-size: 8rem;
@@ -92,6 +92,14 @@
             h3 {
                 font-size: 1.2rem;
             }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .home {
+        .home__info {
+            padding: 0 20px;
         }
     }
 }

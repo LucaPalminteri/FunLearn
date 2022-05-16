@@ -62,7 +62,7 @@ li {
   right: 0px;
   left: 0px;
   height: 80px;
-  background-color: #76B947;
+  background-color: #EFEFEF;
   padding: 0 60px;
   z-index: 10;
 }
@@ -98,10 +98,11 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0;
   cursor: pointer;
   position: absolute;
+  top: 80px;
   background-color: #efab45;
+  border-radius: 0 0 20px 20px;
   -webkit-animation-name: popUp;
           animation-name: popUp;
   -webkit-animation-duration: .2s;
@@ -109,7 +110,7 @@ li {
 }
 
 .header .header__navbar .menu span {
-  padding: 4px 8px;
+  padding: 6px 12px;
   -webkit-transition-duration: .2s;
           transition-duration: .2s;
 }
@@ -119,12 +120,10 @@ li {
 }
 
 .header .header__navbar .teachers {
-  top: 60px;
   right: 420px;
 }
 
 .header .header__navbar .parents {
-  top: 60px;
   right: 320px;
 }
 
@@ -274,7 +273,7 @@ li {
           justify-content: center;
   background-image: url("https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-size: cover;
-  background-position: 40%;
+  background-position: 50%;
 }
 
 .home .home__first-page h1 {
@@ -332,6 +331,12 @@ li {
   }
   .home .home__first-page h3 {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home .home__info {
+    padding: 0 20px;
   }
 }
 

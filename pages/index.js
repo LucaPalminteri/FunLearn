@@ -47,7 +47,11 @@ export default function Home() {
 
 
       {user ? <>
-      <h2>Welcome {user.name}!</h2>
+        <h2>Welcome {user.name}!</h2>
+        <h2>Games</h2>
+        <div className='games-container'>
+          {games}
+        </div>
       </> : <>
 
       <h2>Why choose FunLearn?</h2>
@@ -89,15 +93,7 @@ export default function Home() {
         <li>Help your children reach their full potential autonomously</li>
       </ul>
       </> }
-
-      
-
-      <h2>Games</h2>
-      </div>
-      <div className='games-container'>
-        {games}
-      </div>
-
+        </div>
       <Footer />
     </div>
   )
