@@ -25,6 +25,28 @@ li {
   display: block;
 }
 
+@-webkit-keyframes popUp {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,6 +77,34 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header .header__navbar span {
+  cursor: pointer;
+}
+
+.header .header__navbar .teachers {
+  cursor: pointer;
+  position: absolute;
+  top: 60px;
+  right: 350px;
+  background-color: #efab45;
+  -webkit-animation-name: popUp;
+          animation-name: popUp;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+}
+
+.header .header__navbar .parents {
+  cursor: pointer;
+  position: absolute;
+  top: 60px;
+  right: 180px;
+  background-color: #efab45;
+  -webkit-animation-name: popUp;
+          animation-name: popUp;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
 }
 
 .header .header__navbar button {

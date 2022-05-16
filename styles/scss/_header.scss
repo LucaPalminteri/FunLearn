@@ -1,3 +1,17 @@
+@keyframes popUp {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@mixin animation {
+    animation-name: popUp;
+    animation-duration: .2s;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -17,6 +31,28 @@
     .header__navbar {
         display: flex;
         align-items: center;
+
+        span {
+            cursor: pointer;
+        }
+
+        .teachers {
+            cursor: pointer;
+            position: absolute;
+            top: 60px;
+            right: 350px;
+            background-color: #efab45;
+            @include animation();
+        }
+
+        .parents {
+            cursor: pointer;
+            position: absolute;
+            top: 60px;
+            right: 180px;
+            background-color: #efab45;
+            @include animation();
+        }
 
         button {
             border-radius: 4px;

@@ -8,16 +8,14 @@ export default function Header() {
 
     const { user, error, isLoading } = useUser();
 
-    console.log(isLoading);
-
     const [width, setWidth] = useState(0)
     const [showMenu,setShowMenu] = useState(true)
+    const [menuTeacher, setMenuTeacher] = useState(false)
+    const [menuParents, setMenuParents] = useState(false)
 
     useEffect(()=>{
         setWidth(window.innerWidth);
     },[])
-    
-    console.log(user);
 
     function toggleMenu() {
         setShowMenu(prev => !prev)
@@ -32,6 +30,21 @@ export default function Header() {
       window.addEventListener('resize',handleResize)
     })
 
+    function displayMenuTeacher() {
+        setMenuTeacher(prev => !prev)
+    }
+
+    function displayMenuParents() {
+        setMenuParents(prev => !prev)
+    }
+
+    function resetClicks() {
+        if(menuTeacher || menuParents) {
+            setMenuTeacher(false)
+            setMenuParents(false)
+        }
+    }
+
     return (
         <header className='header'>
             <Link href={'/'}>
@@ -42,13 +55,29 @@ export default function Header() {
 
             {showMenu ? 
             <nav className='header__navbar'>
-                <span>Teachers</span>
-                <span>Parents</span>
+                <span onClick={displayMenuTeacher}>Teachers</span>
+                {menuTeacher ? <div className='teachers'>
+                    <ul>
+                        <li>First step</li>
+                        <li>Second step</li>
+                        <li>Third step</li>
+                        <li>Fourth step</li>
+                    </ul>
+                </div> : <></>}
+                <span onClick={displayMenuParents}>Parents</span>
+                {menuParents ? <div className='parents'>
+                    <ul>
+                        <li>First step</li>
+                        <li>Second step</li>
+                        <li>Third step</li>
+                        <li>Fourth step</li>
+                    </ul>
+                </div> : <></>}
+                <div></div>
                 <p className='language'>EN(US)</p>
                 {user ? 
                 <>
                     <a href="/api/auth/logout">Logout</a>
-                    {/* <img src={user.picture}/> */}
                 </>
                 :
                 <a href="/api/auth/login">Login</a>
