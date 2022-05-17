@@ -40,7 +40,16 @@ export default function Home() {
       <Header />
 
       <div className='home__first-page'>
-        <h1>FunLearn</h1>
+        <h1>
+          <span style={{color:'#FF0000'}}>F</span>
+          <span style={{color:'#FF00F6'}}>u</span>
+          <span style={{color:'#00AA00'}}>n</span>
+          <span style={{color:'#F99D07'}}>L</span>
+          <span style={{color:'#FF0066'}}>e</span>
+          <span style={{color:'#0000FF'}}>a</span>
+          <span style={{color:'#37B6F6'}}>r</span>
+          <span style={{color:'#882FF6'}}>n</span>
+        </h1>
         <h3>A place where you can play and learn</h3>
       </div>
       <div className='home__info'>

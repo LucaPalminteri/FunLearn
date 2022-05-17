@@ -62,9 +62,11 @@ li {
   right: 0px;
   left: 0px;
   height: 80px;
-  background-color: #EFEFEF;
+  background-color: #FFF;
   padding: 0 60px;
   z-index: 10;
+  -webkit-box-shadow: 10px 10px 20px #efefef;
+          box-shadow: 10px 10px 20px #efefef;
 }
 
 .header h1 {
@@ -101,7 +103,7 @@ li {
   cursor: pointer;
   position: absolute;
   top: 80px;
-  background-color: #efab45;
+  background-color: #FFF;
   border-radius: 0 0 20px 20px;
   -webkit-animation-name: popUp;
           animation-name: popUp;
@@ -111,12 +113,12 @@ li {
 
 .header .header__navbar .menu span {
   padding: 6px 12px;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 .header .header__navbar .menu span:hover {
-  background-color: #efefef;
+  color: #2266ff;
 }
 
 .header .header__navbar .teachers {
@@ -371,7 +373,7 @@ li {
   width: 90%;
   height: 90%;
   background-color: #FCFC69;
-  border-radius: 6px;
+  border-radius: 50px;
   -webkit-transition-duration: .2s;
           transition-duration: .2s;
 }
@@ -394,6 +396,12 @@ li {
   border: none;
   border-radius: 20px;
   font-size: 1.5rem;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+.games-container .game-link button:hover {
+  background-color: #2244ff;
 }
 
 .games-container .game-link:hover {
@@ -551,7 +559,7 @@ li {
 .footer {
   text-align: center;
   padding-top: 20px;
-  background-color: #76B947;
+  background-color: #188efa;
 }
 
 .footer .footer__info {
@@ -578,6 +586,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 30px;
 }
 
 .footer .footer__bottom p {
@@ -588,6 +597,14 @@ li {
   .footer .footer__info {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .footer .footer__bottom {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  .footer .footer__bottom p {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

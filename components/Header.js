@@ -3,6 +3,7 @@ import Link from 'next/dist/client/link';
 import { useUser } from '@auth0/nextjs-auth0'
 import Image from 'next/image'
 import { TiThMenu } from 'react-icons/Ti';
+import { AiFillCaretDown } from 'react-icons/ai';
 
 export default function Header() {
 
@@ -14,13 +15,22 @@ export default function Header() {
     const [menuParents, setMenuParents] = useState(false)
     const [responsiveMenu, setResponsiveMenu] = useState(false)
 
+    const menuOptions = 
+    <>
+        <span>Why FunLearn?</span>
+        <span>Try out our activities</span>
+        <span>Curricula</span>
+    </>
+
+    useEffect(()=>{
+        if(menuParents) setMenuTeacher(false)    
+        else if(menuTeacher) setMenuParents(false)
+    },[menuParents,menuTeacher])
+
+    
     useEffect(()=>{
         setWidth(window.innerWidth);
     },[])
-
-    function toggleMenu() {
-        setShowMenu(prev => !prev)
-    }
       
     useEffect(()=>{
       if (width >= 900) setShowMenu(true)
@@ -50,29 +60,44 @@ export default function Header() {
         setResponsiveMenu(prev => !prev)
     }
 
+    function hideMenu() {
+        setMenuTeacher(false)
+        setMenuParents(false)
+    }
+
     return (
         <header className='header' onClick={resetClicks}>
             <Link href={'/'}>
                 <a>
-                    <h1>FunLearn</h1>
+                    <h1>
+                        <span style={{color:'#FF0000'}}>F</span>
+                        <span style={{color:'#FF00F6'}}>u</span>
+                        <span style={{color:'#00AA00'}}>n</span>
+                        <span style={{color:'#F99D07'}}>L</span>
+                        <span style={{color:'#FF0066'}}>e</span>
+                        <span style={{color:'#0000FF'}}>a</span>
+                        <span style={{color:'#37B6F6'}}>r</span>
+                        <span style={{color:'#882FF6'}}>n</span>
+                    </h1>
                 </a>
             </Link>
 
             {showMenu ? 
             <nav className='header__navbar'>
-                <span onClick={displayMenuTeacher}>Teachers</span>
-                {menuTeacher ? <div className='menu teachers'>
-                        <span>First step</span>
-                        <span>Second step</span>
-                        <span>Third step</span>
-                        <span>Fourth step</span>
+                <span 
+                    onMouseOver={displayMenuTeacher} 
+                    onClick={displayMenuTeacher} 
+                >
+                    Teachers <AiFillCaretDown/>
+                </span>
+                {menuTeacher ? <div className='menu teachers' onMouseLeave={hideMenu}>
+                        {menuOptions}
+                        <span>Teaching resources</span>
                 </div> : <></>}
-                <span onClick={displayMenuParents}>Parents</span>
-                {menuParents ? <div className='menu parents'>
-                        <span>First step</span>
-                        <span>Second step</span>
-                        <span>Third step</span>
-                        <span>Fourth step</span>
+                <span onMouseOver={displayMenuParents} onClick={displayMenuParents}>Parents <AiFillCaretDown/></span>
+                {menuParents ? <div className='menu parents' onMouseLeave={hideMenu}>
+                        {menuOptions}
+                        <span>First steps in FunLearn</span>
                 </div> : <></>}
                 <div></div>
                 <p className='language'>EN(US)</p>
@@ -93,17 +118,17 @@ export default function Header() {
             <div className='header__responsive-navbar'>
                 <span onClick={displayMenuTeacher}>Teachers</span>
                 {menuTeacher ? <div className='menu teachers'>
-                        <span>First step</span>
-                        <span>Second step</span>
-                        <span>Third step</span>
-                        <span>Fourth step</span>
+                        <span>Why FunLearn?</span>
+                        <span>Try out our activities</span>
+                        <span>Curricula</span>
+                        <span>Teaching resources</span>
                 </div> : <></>}
                 <span onClick={displayMenuParents}>Parents</span>
                 {menuParents ? <div className='menu parents'>
-                        <span>First step</span>
-                        <span>Second step</span>
-                        <span>Third step</span>
-                        <span>Fourth step</span>
+                        <span>Why FunLearn?</span>
+                        <span>Try out our activities</span>
+                        <span>Curricula</span>
+                        <span>First steps in FunLearn</span>
                 </div> : <></>}
                 <div></div>
                 <p className='language'>EN(US)</p>

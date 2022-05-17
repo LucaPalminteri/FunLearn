@@ -14,7 +14,7 @@
         width: 90%;
         height: 90%;
         background-color: #FCFC69;
-        border-radius: 6px;
+        border-radius: 50px;
         transition-duration: .2s;
 
         h3 {
@@ -35,6 +35,11 @@
             border: none;
             border-radius: 20px;
             font-size: 1.5rem;
+            transition-duration: .2s;
+
+            &:hover{
+                background-color: #2244ff;
+            }
         }
 
         &:hover {
