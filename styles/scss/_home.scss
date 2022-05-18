@@ -28,6 +28,18 @@
     }
 }
 
+@keyframes animationIcon {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 .home {
     
     .home__first-page {
@@ -64,6 +76,10 @@
         justify-content: space-between;
         text-align: center;
         flex-wrap: wrap;
+
+        .animation {
+            animation: animationIcon 3s linear 6s infinite;
+        }
 
         &>div {
             flex-grow: 1;

@@ -66,19 +66,19 @@ export default function Home() {
       <h2>Why choose FunLearn?</h2>
       <div className='home__first-line'>
           <div>
-            <Image src='/images/lightbulb.png' width={200} height={200}/>
+            <Image src='/images/lightbulb.png' width={100} height={100} className='animation'/>
             <h3>Educational platform</h3>
           </div>
           <div>
-            <Image src='/images/book2.png' width={200} height={200}/>
+            <Image src='/images/book2.png' width={100} height={100} className='animation'/>
             <h3>Accesible for everyone</h3>
           </div>
           <div>
-            <Image src='/images/book.png' width={200} height={200}/>
+            <Image src='/images/book.png' width={100} height={100} className='animation'/>
             <h3>Free learning</h3>
           </div>
           <div>
-            <Image src='/images/engineering.png' width={200} height={200}/>
+            <Image src='/images/engineering.png' width={100} height={100} className='animation'/>
             <h3>No ads</h3>
           </div>
       </div>
