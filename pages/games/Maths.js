@@ -1,14 +1,20 @@
 import React, {useState, useEffect} from "react";
-// import Add from './Add'
-// import Subtract from './Subtract'
-// import Multiply from './Multiply'
-// import Divide from './Divide'
+import Add from './componentsGame/Add'
+import Divide from './componentsGame/Divide'
+import Multiply from './componentsGame/Multiply'
+import Subtract from './componentsGame/Subtract'
+import { MathContext } from "./componentsGame/MathContext";
 
 export default function Maths() {
 
     const [games,setGames] = useState(0)
     const [wins,setWins] = useState(0)
-    const [random,setRandom] = useState(Math.floor(Math.random()*4))
+    const [random,setRandom] = useState()
+
+    useEffect(()=>
+    {
+        setRandom(Math.floor(Math.random()*4))
+    },[])
 
     function addGames() {
         setGames(prev=>prev+1)
@@ -28,16 +34,18 @@ export default function Maths() {
     }
 
     return (
-        <div className="maths game">
-            <h2>Maths</h2>
-            <div className="points">
-                <span>Points: {wins}/{games} - </span>
-                <span>{games === 0 ? 0 : result()}%</span>
+        <MathContext.Provider value={{addGames, addWin, changeOption}}>
+            <div className="maths game">
+                <h2>Maths</h2>
+                <div className="points">
+                    <span>Points: {wins}/{games} - </span>
+                    <span>{games === 0 ? 0 : result()}%</span>
+                </div>
+            {random == 0 ? <Add/> : 
+            random == 1 ? <Subtract/> :
+            random == 2 ? <Multiply/> :
+            random == 3 ? <Divide/> : random}
             </div>
-        {random == 0 ? <Add/> : 
-        random == 1 ? <Subtract/> :
-        random == 2 ? <Multiply/> :
-        random == 3 ? <Divide/> : random}
-        </div>
+        </MathContext.Provider>
     )
 }
