@@ -11,14 +11,15 @@ export default function Quiz() {
     const [data,setData] = useState(Data.questions)
     const [random,setRandom] = useState(Math.floor(Math.random()*Data.questions.length))
     const [answer,setAnswer] = useState('')
+    const [isDisabled,setIsDisabled] = useState(false)
+    const correctAnswer = data[random].correct_answer
+    const incorrectAnswers = data[random].incorrect_answers
 
-    function toggle() {
-        setAnswer('correct')
-        reset()
-    }
 
-    function noToggle() {
-        setAnswer('incorrect')
+    function toggle(e) {
+      if (e.target.innerText === correctAnswer) setAnswer('correct')
+      else setAnswer('incorrect')
+      setIsDisabled(true)
         reset()
     }
 
@@ -26,15 +27,16 @@ export default function Quiz() {
         setTimeout(()=>{
             setRandom(Math.floor(Math.random()*50))
             setAnswer('')
+            setIsDisabled(false)
         },2000)
     }
 
     const buttons = [
-            <button key={nanoid()} onClick={noToggle}>{data[random].incorrect_answers[1]}</button>,
-            <button key={nanoid()} onClick={noToggle}>{data[random].incorrect_answers[0]}</button>,
-            <button key={nanoid()} onClick={toggle}>{data[random].correct_answer}</button>,
-            <button key={nanoid()} onClick={noToggle}>{data[random].incorrect_answers[2]}</button>
+      incorrectAnswers.map(item => {
+        return <button key={nanoid()} onClick={toggle} disabled={isDisabled}>{item}</button>}),
+        <button key={nanoid()} onClick={toggle} disabled={isDisabled}>{correctAnswer}</button>
     ].sort(() => (Math.random() > .5) ? 1 : -1);
+    
   return (
     <div className="quiz game">
       <Head>
@@ -55,7 +57,7 @@ export default function Quiz() {
       ) : answer === "incorrect" ? (
         <>
           <div className="message">
-            Incorect - {data[random].correct_answer}
+            Incorect - {correctAnswer}
           </div>
         </>
       ) : (
