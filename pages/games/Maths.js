@@ -45,14 +45,17 @@ export default function Maths() {
             <Header />
             <div className="maths game">
                 <h2>Maths</h2>
+                <div className="maths__container">
+
                 <div className="points">
                     <span>Points: {wins}/{games} - </span>
                     <span>{games === 0 ? 0 : result()}%</span>
                 </div>
-            {random == 0 ? <Add/> : 
-            random == 1 ? <Subtract/> :
-            random == 2 ? <Multiply/> :
-            random == 3 ? <Divide/> : random}
+                {random == 0 ? <Add/> : 
+                random == 1 ? <Subtract/> :
+                random == 2 ? <Multiply/> :
+                random == 3 ? <Divide/> : random}
+                </div>
             </div>
             <Link href='/'>
                 <a>Back home</a>

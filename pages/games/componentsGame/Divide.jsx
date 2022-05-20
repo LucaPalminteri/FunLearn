@@ -47,7 +47,8 @@ export default function Maths(props) {
     return (
         <div >
             <div className="operation">
-                {num} / <input 
+                {num} / <input  
+                    autoComplete="off"
                     autoFocus
                     onKeyPress={handleKeyPress}
                     name="input"

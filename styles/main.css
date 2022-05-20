@@ -480,8 +480,24 @@ li {
   margin-left: 10px;
 }
 
-.maths h2 {
-  background-color: green;
+.maths .maths__container {
+  margin: 20px 0;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+.maths .maths__container input {
+  font-size: 20px;
+}
+
+.maths .maths__container div {
+  margin: 10px 0;
+}
+
+.maths .maths__container button {
+  margin-top: 20px;
+  font-size: 20px;
 }
 
 .memory h2 {
