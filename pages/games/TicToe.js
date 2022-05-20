@@ -100,6 +100,8 @@ export default function TicToe() {
                 <button onClick={toggle} className='cell 9'></button>
             </div>
              : <></>}
+             <div className='messagge-container'>
+
             {winner || result ?
             <div>
                 <h4>Times X wins: {xWins}</h4>
@@ -111,6 +113,7 @@ export default function TicToe() {
             {winner === 'X' ? 'Winner: player X' : winner === 'O' ? 'Winner: player O' : result ? 'Tie!' : <></> }
             </h3>
             {winner || result ? <button onClick={reset}>Play Again</button>: ''}
+            </div>
 
             <Link href='/'>
                 <a>Back home</a>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 import Clock from "../../components/Clock";
-//import Confetti from 'react-confetti'
 import { secs, mins } from "../../components/Clock";
 import Head from 'next/head'
 import Link from 'next/dist/client/link';
@@ -66,7 +65,7 @@ export default function Pyramid(props) {
     }
 
     function newPyramid(arr) {
-        let pyramid = [],aux = 0;
+        let pyramid = []
 
         for (let i = 0; i < arr.length; i++) {
             let line = []
@@ -95,7 +94,7 @@ export default function Pyramid(props) {
 
         
         return(
-            <div className="pyramid">
+            <div className="pyramid__container">
                 {pyramid.reverse()}
             </div>
         )
@@ -110,7 +109,7 @@ export default function Pyramid(props) {
         if(aux >= tries) setWin(true);
         else console.log("lose");
         setTimeout(()=>{
-            setTest(createBase(props.value))
+            setTest(createBase(props.value || 8))
             setWin(false)
             setFinish(false)
         },2000)
@@ -146,16 +145,14 @@ export default function Pyramid(props) {
                     </>
                      : 
                     <>
-                        <label>Time:</label>
-                        <Clock second={0} minute={0}/>
+                        <label>Time: <Clock second={0} minute={0}/></label>
+                        
                     </>
                     }
-                    <label>Record:</label>
-                    <span>{record[0]}:{record[1]}</span>
+                    <label>Record: {record[0]}:{record[1]}</label>
                 </div>
             </main>
-            {/*win && <Confetti width={window.innerWidth} height={window.innerHeight} gravity={0.5}/>*/}
-            <div>
+            <div className="btn-container">
                 <button onClick={toggle}>New Game</button>
                 <button onClick={verify}>Finish</button>
             </div>
