@@ -48,6 +48,10 @@
     }
 }
 
+.game {
+    margin-top: 100px;
+}
+
 @media screen and (max-width: 1000px) {
     .games-container {
         grid-template-columns: repeat(2,1fr);

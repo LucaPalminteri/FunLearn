@@ -82,6 +82,8 @@ export default function Anagram() {
         </Head>
         <Header />
         <h2>Anagram</h2>
+        <div className="anagram__main">
+
         <div>
             <span>Points: {winCount}/{count} </span>
             <span>- {winCount === 0 ? '0' : ((winCount/count) + '').slice(0,4)}%</span>
@@ -90,9 +92,10 @@ export default function Anagram() {
         <button onClick={toggle} disabled={isDisabled}>Review</button>
         <h4 className="anagram">{isDone ? finalAnagram() : output}</h4>
         <h3 className="message">{didWin === 'win' ? 'Win': didWin === 'lose' ? "Lose" : didWin}</h3>
+        </div>
         <Link href='/'>
-                <a>Back home</a>
-            </Link>
+            <a>Back home</a>
+        </Link>
         <Footer />
     </div>
   )

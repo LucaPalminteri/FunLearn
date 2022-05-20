@@ -11,10 +11,8 @@ import { nanoid } from 'nanoid';
 export default function Home() {
 
   const { user, error, isLoading } = useUser();
-  console.log(user);
 
   const games = dataGames.map( game => {
-    console.log(game.img);
     return(
       <Link href={game.href} key={nanoid()}>
           <a className='game-link'>

@@ -1,5 +1,14 @@
 .anagram {
-    h2 {
-        background-color: green;
+    text-align: center;
+
+    input {
+        height: 50px;
+        font-size: 30px;
+        width: 200px;
+    }
+
+    button {
+        height: 50px;
+        margin-left: 10px;
     }
 }

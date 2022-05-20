@@ -1,4 +1,8 @@
 import React, {useState, useEffect} from "react";
+import Head from 'next/head'
+import Link from 'next/dist/client/link';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import Add from './componentsGame/Add'
 import Divide from './componentsGame/Divide'
 import Multiply from './componentsGame/Multiply'
@@ -35,6 +39,10 @@ export default function Maths() {
 
     return (
         <MathContext.Provider value={{addGames, addWin, changeOption}}>
+            <Head>
+                <title>Maths</title>
+            </Head>
+            <Header />
             <div className="maths game">
                 <h2>Maths</h2>
                 <div className="points">
@@ -46,6 +54,10 @@ export default function Maths() {
             random == 2 ? <Multiply/> :
             random == 3 ? <Divide/> : random}
             </div>
+            <Link href='/'>
+                <a>Back home</a>
+            </Link>
+            <Footer/>
         </MathContext.Provider>
     )
 }

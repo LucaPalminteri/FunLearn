@@ -5,11 +5,13 @@ import Footer from '../../components/Footer';
 
 export default function AboutUs() {
     return (
-        <div>
+        <div className='info'>
             <Head>
                 <title>About Us</title>
             </Head>
             <Header />
+            <div className='home__info'>
+
             <h1>About Us</h1>
             <p>Are you looking to create interactive learning games but have no time to learn how? With FunLearn, you can create engaging activities in minutes. Just enter your words, or questions and answers and FunLearn turns your content into cool interactive games.</p>
             <p>Once you've created an activity, a unique code is generated. Simply share that code with your students and they'll be able to play the game on their own device, in class, at home or even on the bus on the way to school. You can even embed the games into your own website if you want to.</p>
@@ -19,6 +21,7 @@ export default function AboutUs() {
             <Link href='/'>
                 <a><button>Back home</button></a>
             </Link>
+            </div>
             <Footer />
         </div>
     )

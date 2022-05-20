@@ -5,11 +5,13 @@ import Footer from '../../components/Footer';
 
 export default function PrivacyPolicy() {
     return (
-        <div>
+        <div className='info'>
             <Head>
                 <title>Privacy Policy</title>
             </Head>
             <Header />
+            <div className='home__info'>
+
             <h1>Privacy Policy</h1>
             <h2>Securing information</h2>
             <p>FunLearn is committed to protecting your privacy and we comply fully with UK and EU data protection law (GDPR). We have put in place physical, electronic and operational procedures intended to safeguard and secure the information we collect. All FunLearn staff have a legal duty to respect the confidentiality of your information, and access to your personal details is restricted only to those who have a reasonable need to access it.</p>
@@ -53,6 +55,7 @@ export default function PrivacyPolicy() {
             <Link href='/'>
                 <a><button>Back home</button></a>
             </Link>
+            </div>
             <Footer />
         </div>
     )

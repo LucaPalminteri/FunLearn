@@ -5,11 +5,13 @@ import Footer from '../../components/Footer';
 
 export default function TermsAndConditions() {
     return (
-        <div>
+        <div className='info'>
             <Head>
                 <title>Terms and Conditions</title>
             </Head>
             <Header />
+            <div className='home__info'>
+
             <h1>Terms and Conditions</h1>
             <p>Please read this agreement carefully before accessing or using the FunLearn website. These Terms and Conditions are designed to ensure that you and your students have a safe and enjoyable experience with FunLearn. The information and services on the FunLearn website are provided by FunLearn subject to your agreement to the Terms and Conditions below.</p>
 
@@ -49,6 +51,7 @@ export default function TermsAndConditions() {
             <Link href='/'>
                 <a><button>Back home</button></a>
             </Link>
+            </div>
             <Footer />
         </div>
     )
