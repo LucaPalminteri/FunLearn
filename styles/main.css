@@ -521,6 +521,22 @@ li {
   height: 100px;
 }
 
+.memory .btn-container button:nth-child(1) {
+  border-top-left-radius: 50px;
+}
+
+.memory .btn-container button:nth-child(4) {
+  border-top-right-radius: 50px;
+}
+
+.memory .btn-container button:nth-child(13) {
+  border-bottom-left-radius: 50px;
+}
+
+.memory .btn-container button:nth-child(16) {
+  border-bottom-right-radius: 50px;
+}
+
 .pyramid .pyramid__container {
   display: -webkit-box;
   display: -ms-flexbox;

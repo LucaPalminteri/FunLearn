@@ -14,24 +14,23 @@ export default function Memory() {
     const [count,setCount] = useState({...countObj})
 
     const btns = [];
+    for (let i = 0; i < 16; i++) {
+        btns.push(<button onClick={getButton} id={i} key={i}></button>)
+    }
 
 
     function getButton(e) {
         let id = e.target.id;
         setCount(prevObj => ({count:prevObj.count + 1,buttons: prevObj.buttons.concat(id)}))
-        if(count.count == 2) {
-            //btns[count.buttons[0]].props.children= 'SUCCES'
-            setCount(countObj)
-        }
         if(e.target.innerText == id) e.target.innerText = ''
         else e.target.innerText = id
+        if(count.count == 2) {
+            //console.log(`0: ${count.buttons[0]} - 1: ${count.buttons[1]}`)
+            console.log(btns[count.buttons[0]]);
+            setCount(countObj)
+        }
     }
-    console.log(count.buttons);
     
-    for (let i = 0; i < 16; i++) {
-        btns.push(<button onClick={getButton} id={i} key={i}>S</button>)
-    }
-    console.log(btns[0].props);
 
     return (
         <div className='memory game'>
