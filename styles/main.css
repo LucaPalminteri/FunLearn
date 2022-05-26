@@ -504,6 +504,23 @@ li {
   background-color: green;
 }
 
+.memory .btn-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  -ms-grid-columns: (minmax(100px, 150px))[4];
+      grid-template-columns: repeat(4, minmax(100px, 150px));
+  grid-template-columns: repeat(4, minmax(100px, 150px));
+}
+
+.memory .btn-container button {
+  height: 100px;
+}
+
 .pyramid .pyramid__container {
   display: -webkit-box;
   display: -ms-flexbox;

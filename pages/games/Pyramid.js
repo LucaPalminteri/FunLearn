@@ -12,7 +12,8 @@ export default function Pyramid(props) {
     const [test, setTest] = useState([])
     const [win, setWin ] = useState(false);
     const [finish,setFinish] = useState(false);
-    const [record,setRecord] = useState([])
+    const [record,setRecord] = useState([]);
+    const [time,setTime] = useState();
     let aux = 0,tries = 0;
 
     useEffect(()=> {
@@ -23,6 +24,7 @@ export default function Pyramid(props) {
 
     useEffect(()=> {
         setTest(createBase(props.value || 8))
+        setTime(<Clock second={0} minute={0}/>)
     },[])
 
     function changeInput(e,i,j) {
@@ -101,6 +103,7 @@ export default function Pyramid(props) {
     }
 
     function toggle() {
+        console.log("should update");
         setTest(createBase(props.value || 8))
     }
 
@@ -145,7 +148,7 @@ export default function Pyramid(props) {
                     </>
                      : 
                     <>
-                        <label>Time: <Clock second={0} minute={0}/></label>
+                        <label>Time: {time}</label>
                         
                     </>
                     }
