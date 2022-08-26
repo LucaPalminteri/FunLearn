@@ -103,10 +103,10 @@ export default function Header() {
                 <p className='language'>EN(US)</p>
                 {user ? 
                 <>
-                    <a href="/api/auth/logout" className='login logout'>Logout</a>
+                <Link href="/api/auth/logout" className='login logout'>Logout</Link>
                 </>
                 :
-                <a href="/api/auth/login" className='login'>Login</a>
+                <Link href="/api/auth/login" className='login'>Login</Link>
                 }
             </nav>
             :
@@ -134,10 +134,10 @@ export default function Header() {
                 <p className='language'>EN(US)</p>
                 {user ? 
                 <>
-                    <a href="/api/auth/logout" className='login logout'>Logout</a>
+                    <Link href="/api/auth/logout" className='login logout'>Logout</Link>
                 </>
                 :
-                <a href="/api/auth/login" className='login'>Login</a>
+                <Link href="/api/auth/login" className='login'>Login</Link>
                 }
             </div>
             : <></>}

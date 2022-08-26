@@ -35,10 +35,10 @@ export default function PrivacyPolicy() {
                 <li>contacting you to give you an opportunity to complete a customer satisfaction survey</li>
                 <li>disclosing your personal data in order to comply with any legal obligation</li>
             </ul>
-            <p>To stop receiving information by email, simply click on the 'Unsubscribe' link at the bottom of any of our newsletters. Note that, by doing so, you may miss important service updates and notifications about new features and special offers.</p>
+            <p>To stop receiving information by email, simply click on the &#39;Unsubscribe&#39; link at the bottom of any of our newsletters. Note that, by doing so, you may miss important service updates and notifications about new features and special offers.</p>
 
             <h2>Where your personal information is stored</h2>
-            <p>Your username (usually the email you signed up with) and password are stored in a secured, encrypted database hosted by FunLearn's server partners. You may choose to add extra information to your profile, such as first and last name, but no other personal, identifying information is stored by FunLearn.</p>
+            <p>Your username (usually the email you signed up with) and password are stored in a secured, encrypted database hosted by FunLearn&#39;s server partners. You may choose to add extra information to your profile, such as first and last name, but no other personal, identifying information is stored by FunLearn.</p>
 
             <h2>Sharing information</h2>
             <p>FunLearn does not share personal information with third parties. We may however disclose your personal information if we are required by law to do so or if you violate our Terms of Service.</p>
@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
             <p>We may review and update this notice to comply with the latest legislation. The up-to-date copy of this policy can be found on this web page.</p>
 
             <h2>Updating your details</h2>
-            <p>If you have any questions or queries regarding this privacy policy, please contact us via the app. If any of the information that you have provided to FunLearn changes, simply update your details in the My Account section after you've logged in.</p>
+            <p>If you have any questions or queries regarding this privacy policy, please contact us via the app. If any of the information that you have provided to FunLearn changes, simply update your details in the My Account section after you&#39;ve logged in.</p>
 
             <Link href='/'>
                 <a><button>Back home</button></a>
